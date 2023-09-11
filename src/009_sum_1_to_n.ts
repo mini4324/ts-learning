@@ -10,8 +10,8 @@
 
 export function sumOneToN(a: number) {
   let total = 0;
-  for (let b = 0; b < a; b++) {
-    total += b + 1;
+  for (let b = 0; b <= a; b++) {
+    total += b;
   }
   return total;
 }
