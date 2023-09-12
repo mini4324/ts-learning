@@ -1,5 +1,3 @@
-import { S } from "vitest/dist/reporters-cb94c88b";
-
 /*
  * 文字列を二つ受け取り、それらを結合した文字列を返す関数を作成してください。
  */
