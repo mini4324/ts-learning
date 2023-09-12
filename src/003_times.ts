@@ -1,5 +1,3 @@
-import { N } from "vitest/dist/reporters-cb94c88b";
-
 /*
  * 二つの数値を受け取り、その積を返す関数
  */
