@@ -5,9 +5,7 @@
  * "hello, ****! how are you?" という文字列を返す。
  */
 export function hideBannedWord(word: string) {
-  if (word.indexOf("hoge")) {
-    return word.replace("hoge", "****");
-  }
+  return word.replace("hoge", "****");
 }
 
 /* 以下はテストコードなので触らないでください */
