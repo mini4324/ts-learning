@@ -4,16 +4,20 @@
  * たとえば "hello, hoge! how are you?" という文字列を受け取ったら
  * "hello, ****! how are you?" という文字列を返す。
  */
-export function hideBannedWord() {}
+export function hideBannedWord(word: string) {
+  if (word.indexOf("hoge")) {
+    return word.replace("hoge", "****");
+  }
+}
 
 /* 以下はテストコードなので触らないでください */
 if (import.meta.vitest) {
   const { it, expect } = import.meta.vitest;
-  it('hideBannedWord', () => {
-    expect(hideBannedWord('hello, world!')).toBe('hello, world!');
-    expect(hideBannedWord('hello, hoge! how are you?')).toBe(
-      'hello, ****! how are you?'
+  it("hideBannedWord", () => {
+    expect(hideBannedWord("hello, world!")).toBe("hello, world!");
+    expect(hideBannedWord("hello, hoge! how are you?")).toBe(
+      "hello, ****! how are you?"
     );
-    expect(hideBannedWord('hogeは最高です')).toBe('****は最高です');
+    expect(hideBannedWord("hogeは最高です")).toBe("****は最高です");
   });
 }
