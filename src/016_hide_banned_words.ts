@@ -10,17 +10,17 @@ export function hideBannedWords() {}
 /* 以下はテストコードなので触らないでください */
 if (import.meta.vitest) {
   const { it, expect } = import.meta.vitest;
-  it('hideBannedWords', () => {
-    expect(hideBannedWords('hello, world!')).toBe('hello, world!');
-    expect(hideBannedWords('hello, hoge! how are you? fuga is great!')).toBe(
-      'hello, ****! how are you? **** is great!'
+  it("hideBannedWords", () => {
+    expect(hideBannedWords("hello, world!")).toBe("hello, world!");
+    expect(hideBannedWords("hello, hoge! how are you? fuga is great!")).toBe(
+      "hello, ****! how are you? **** is great!",
     );
     expect(
       hideBannedWords(
-        'hogeは最高です。fugaも素晴らしいです。fooはbarでhogeはbarですね。'
-      )
+        "hogeは最高です。fugaも素晴らしいです。fooはbarでhogeはbarですね。",
+      ),
     ).toBe(
-      '****は最高です。****も素晴らしいです。****は****で****は****ですね。'
+      "****は最高です。****も素晴らしいです。****は****で****は****ですね。",
     );
   });
 }
