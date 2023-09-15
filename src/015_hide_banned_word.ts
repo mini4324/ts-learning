@@ -14,7 +14,7 @@ if (import.meta.vitest) {
   it("hideBannedWord", () => {
     expect(hideBannedWord("hello, world!")).toBe("hello, world!");
     expect(hideBannedWord("hello, hoge! how are you?")).toBe(
-      "hello, ****! how are you?"
+      "hello, ****! how are you?",
     );
     expect(hideBannedWord("hogeは最高です")).toBe("****は最高です");
   });

@@ -9,9 +9,9 @@ export function reverseWord() {}
 /* 以下はテストコードなので触らないでください */
 if (import.meta.vitest) {
   const { it, expect } = import.meta.vitest;
-  it('reverseWord', () => {
-    expect(reverseWord('hello')).toBe('olleh');
-    expect(reverseWord('hello, world!')).toBe('!dlrow ,olleh');
-    expect(reverseWord('こんにちは')).toBe('はちにんこ');
+  it("reverseWord", () => {
+    expect(reverseWord("hello")).toBe("olleh");
+    expect(reverseWord("hello, world!")).toBe("!dlrow ,olleh");
+    expect(reverseWord("こんにちは")).toBe("はちにんこ");
   });
 }
