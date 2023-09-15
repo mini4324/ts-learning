@@ -1,4 +1,4 @@
-# js-practice
+# ts-learning
 
 vitestのin-source testingを使ったJS練習問題集を作る試み
 
