@@ -5,7 +5,13 @@
  * たとえば "hello, hoge! how are you? fuga is great!" という文字列を受け取ったら
  * "hello, ****! how are you? **** is great!" という文字列を返す。
  */
-export function hideBannedWords() {}
+export function hideBannedWords(word: string) {
+  const first = word.replace(/hoge/g, "****");
+  const second = first.replace(/fuga/g, "****");
+  const third = second.replace(/foo/g, "****");
+  const fourth = third.replace(/bar/g, "****");
+  return fourth;
+}
 
 /* 以下はテストコードなので触らないでください */
 if (import.meta.vitest) {
