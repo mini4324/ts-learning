@@ -6,11 +6,12 @@
  * "hello, ****! how are you? **** is great!" という文字列を返す。
  */
 export function hideBannedWords(word: string) {
-  const first = word.replace(/hoge/g, "****");
-  const second = first.replace(/fuga/g, "****");
-  const third = second.replace(/foo/g, "****");
-  const fourth = third.replace(/bar/g, "****");
-  return fourth;
+  const first = word
+    .replaceAll("hoge", "****")
+    .replaceAll("fuga", "****")
+    .replaceAll("foo", "****")
+    .replaceAll("bar", "****");
+  return first;
 }
 
 /* 以下はテストコードなので触らないでください */
