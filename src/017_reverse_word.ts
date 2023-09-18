@@ -4,7 +4,9 @@
  * "hello, world!" -> "!dlrow ,olleh"
  * "こんにちは" -> "はちにんこ"
  */
-export function reverseWord() {}
+export function reverseWord(word: string) {
+  return word.split("").reverse().join("");
+}
 
 /* 以下はテストコードなので触らないでください */
 if (import.meta.vitest) {
