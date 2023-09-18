@@ -1,5 +1,3 @@
-import { WorkerRPC } from "vitest";
-
 /*
  * 文字列を受け取り、逆さまにして返す関数。
  * "hello" -> "olleh"
