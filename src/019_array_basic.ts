@@ -41,7 +41,7 @@ function joinTwoArrays(a: Array<number>, b: Array<number>) {
  * たとえば[1, 2, 3]が渡されたら[3, 2, 1]を返す。
  */
 function reverseArray(a: Array<number>) {
-  const array = a.reverse();
+  const array = [...a].reverse();
   return array;
 }
 
