@@ -5,8 +5,8 @@
 
 /* 配列[1, 2, 3]を返す関数 */
 function defineArray() {
-  const a = [1, 2, 3];
-  return a;
+  const array = [1, 2, 3];
+  return array;
 }
 
 /*
@@ -14,17 +14,17 @@ function defineArray() {
  * たとえば[2, 2]と1が渡されたら[2, 2, 1]を返す。
  */
 function insertToLast(a: Array<number>, b: number) {
-  a.push(b);
-  return a;
+  const array = [...a, b];
+  return array;
 }
 
 /*
  * 数値の配列と数値nを受け取り、配列の先頭にそのnを加えて返す関数。
  * たとえば[2, 2]と1が渡されたら[1, 2, 2]を返す。
  */
-function insertToFirst(a: Array<number>, b: number) {
-  a.unshift(b);
-  return a;
+function insertToFirst(a: Array<number>, n: number) {
+  const array = [n, ...a];
+  return array;
 }
 
 /*
@@ -32,7 +32,8 @@ function insertToFirst(a: Array<number>, b: number) {
  * たとえば[2, 2]と[5, 5]が渡されたら[2, 2, 5, 5]を返す。
  */
 function joinTwoArrays(a: Array<number>, b: Array<number>) {
-  return a.concat(b);
+  const array = a.concat(b);
+  return array;
 }
 
 /*
@@ -40,7 +41,8 @@ function joinTwoArrays(a: Array<number>, b: Array<number>) {
  * たとえば[1, 2, 3]が渡されたら[3, 2, 1]を返す。
  */
 function reverseArray(a: Array<number>) {
-  return a.reverse();
+  const array = a.reverse();
+  return array;
 }
 
 /*
@@ -60,9 +62,9 @@ function sortArrayAsc(a: Array<number>) {
  */
 function sortArrayDesc(a: Array<number>) {
   function compareNumbers(b: number, c: number) {
-    return b - c;
+    return c - b;
   }
-  return a.sort(compareNumbers).reverse();
+  return a.sort(compareNumbers);
 }
 
 /*
