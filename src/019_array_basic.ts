@@ -4,48 +4,77 @@
  */
 
 /* 配列[1, 2, 3]を返す関数 */
-function defineArray() {}
+function defineArray() {
+  const a = [1, 2, 3];
+  return a;
+}
 
 /*
  * 数値の配列と数値nを受け取り、配列の末尾にそのnを加えて返す関数。
  * たとえば[2, 2]と1が渡されたら[2, 2, 1]を返す。
  */
-function insertToLast() {}
+function insertToLast(a: Array<number>, b: number) {
+  a.push(b);
+  return a;
+}
 
 /*
  * 数値の配列と数値nを受け取り、配列の先頭にそのnを加えて返す関数。
  * たとえば[2, 2]と1が渡されたら[1, 2, 2]を返す。
  */
-function insertToFirst() {}
+function insertToFirst(a: Array<number>, b: number) {
+  a.unshift(b);
+  return a;
+}
 
 /*
  * 数値の配列を２つ受け取り、結合して返す関数。
  * たとえば[2, 2]と[5, 5]が渡されたら[2, 2, 5, 5]を返す。
  */
-function joinTwoArrays() {}
+function joinTwoArrays(a: Array<number>, b: Array<number>) {
+  return a.concat(b);
+}
 
 /*
  * 数値の配列を受け取り、逆順にして返す関数。
  * たとえば[1, 2, 3]が渡されたら[3, 2, 1]を返す。
  */
-function reverseArray() {}
+function reverseArray(a: Array<number>) {
+  return a.reverse();
+}
 
 /*
  * 数値の配列を受け取り、昇順に並び替えて返す関数。
  * たとえば[3, 2, 4, 1]が渡されたら[1, 2, 3, 4]を返す。
  */
-function sortArrayAsc() {}
+function sortArrayAsc(a: Array<number>) {
+  function compareNumbers(b: number, c: number) {
+    return b - c;
+  }
+  return a.sort(compareNumbers);
+}
 
 /*
  * 数値の配列を受け取り、降順に並び替えて返す関数。
  * たとえば[3, 2, 4, 1]が渡されたら[4, 3, 2, 1]を返す。
  */
-function sortArrayDesc() {}
+function sortArrayDesc(a: Array<number>) {
+  function compareNumbers(b: number, c: number) {
+    return b - c;
+  }
+  return a.sort(compareNumbers).reverse();
+}
 
 /*
  * 数値の配列arrayと数値nを受け取る。arrayの中にnが含まれていればtrueを返し、そうでないならfalseを返す関数
  */
-function findN() {}
+function findN(a: Array<number>, n: number) {
+  if (a.includes(n)) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 /* 以下はテストコードなので触らないでください */
 if (import.meta.vitest) {
