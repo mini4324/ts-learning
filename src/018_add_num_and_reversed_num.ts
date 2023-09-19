@@ -7,6 +7,9 @@
  */
 export function addNumAndReversedNum(n: number): number {
   // ここに実装を書いてください
+  const hoge = n.toString().split("").reverse().join("");
+  const foo = Number(hoge) + n;
+  return foo;
 }
 
 /* 以下はテストコードなので触らないでください */
