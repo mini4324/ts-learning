@@ -7,7 +7,10 @@
  *  ([1, 2, 3], [1, 2]) が渡されたなら、返る値は [3]
  *  ([1, 2, 3], [0, 487, 256]) が渡されたなら、返る値は [1, 2, 3]
  */
-function omitValues() {}
+function omitValues(a: Array<number>, n: Array<number>) {
+  const array = a.filter((i) => n.indexOf(i) == -1);
+  return array;
+}
 
 /* 以下はテストコードなので触らないでください */
 if (import.meta.vitest) {
