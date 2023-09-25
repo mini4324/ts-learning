@@ -12,8 +12,15 @@
   return array;
 }*/
 
-function omitValues(a: Array<number>, n: Array<number>) {
+/*function omitValues(a: Array<number>, n: Array<number>) {
   const array = a.filter((i) => n.includes(i) == false);
+  return array;
+}*/
+
+function omitValues(a: Array<number>, n: Array<number>) {
+  const array = a.filter(function (i) {
+    return n.includes(i) == false;
+  });
   return array;
 }
 
