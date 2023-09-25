@@ -7,8 +7,13 @@
  *  ([1, 2, 3], [1, 2]) が渡されたなら、返る値は [3]
  *  ([1, 2, 3], [0, 487, 256]) が渡されたなら、返る値は [1, 2, 3]
  */
-function omitValues(a: Array<number>, n: Array<number>) {
+/*function omitValues(a: Array<number>, n: Array<number>) {
   const array = a.filter((i) => n.indexOf(i) == -1);
+  return array;
+}*/
+
+function omitValues(a: Array<number>, n: Array<number>) {
+  const array = a.filter((i) => n.includes(i) == false);
   return array;
 }
 
