@@ -18,9 +18,19 @@
 }*/
 
 function omitValues(a: Array<number>, n: Array<number>) {
-  const array = a.filter(function (i) {
-    return n.includes(i) == false;
-  });
+  const array = [];
+  for (const value of a) {
+    let matched = false;
+    for (const hoge of n) {
+      if (value === hoge) {
+        matched = true;
+      }
+    }
+    if (matched !== true) {
+      //これはmatched!==falseと同じ意味
+      array.push(value);
+    }
+  }
   return array;
 }
 
