@@ -37,12 +37,13 @@ function isXNeighborOk([x, y]: [number, number]): boolean {
  * 例: [1, 1]は真ん中のセルで、上のセルが⭕なので、isYNeighborOk([1, 1])はtrueを返す。
  */
 function isYNeighborOk([x, y]: [number, number]): boolean {
-  if (y - 1 >= 0) {
+  if (y - 1 >= 0 && y <= 2) {
     return BOARD[y - 1][x] === "⭕";
   }
-  if (y + 1 <= 2) {
+  if (y + 1 <= 2 && y >= 0) {
     return BOARD[y + 1][x] === "⭕";
   }
+  throw new Error("yの値指定が不正です");
 }
 
 /* 以下はテストコードなので触らないでください */
@@ -102,6 +103,10 @@ if (import.meta.vitest) {
 
     it("[2, 1]はfalse", () => {
       expect(isYNeighborOk([2, 1])).toEqual(false);
+    });
+
+    it("[0, 10]はfalse", () => {
+      expect(isYNeighborOk([0, 10])).toEqual();
     });
 
     it("[2, 2]はtrue", () => {
