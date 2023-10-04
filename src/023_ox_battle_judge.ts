@@ -20,8 +20,40 @@ type Board = [[Cell, Cell, Cell], [Cell, Cell, Cell], [Cell, Cell, Cell]];
  * ];
  * したがって、そのときのjudgeIfMaruWins(board)はtrueを返す。
  */
-function judgeIfMaruWins(board: Board): boolean {}
-
+function judgeIfMaruWins(board: Board): boolean {
+  let [x, y, z] = board;
+  let [a, b, c] = x;
+  let [d, e, f] = y;
+  let [g, h, i] = z;
+  let hoge = false;
+  if (a === "⭕" && b === "⭕" && c === "⭕") {
+    hoge = true;
+  }
+  if (d === "⭕" && e === "⭕" && f === "⭕") {
+    hoge = true;
+  }
+  if (g === "⭕" && h === "⭕" && i === "⭕") {
+    hoge = true;
+  }
+  if (a === "⭕" && d === "⭕" && g === "⭕") {
+    hoge = true;
+  }
+  if (b === "⭕" && e === "⭕" && h === "⭕") {
+    hoge = true;
+  }
+  if (c === "⭕" && f === "⭕" && i === "⭕") {
+    hoge = true;
+  }
+  if (a === "⭕" && e === "⭕" && i === "⭕") {
+    hoge = true;
+  }
+  if (c === "⭕" && e === "⭕" && g === "⭕") {
+    hoge = true;
+  }
+  if (hoge) {
+    return true;
+  }
+}
 /* 以下はテストコードなので触らないでください */
 if (import.meta.vitest) {
   const { it, describe, expect } = import.meta.vitest;
